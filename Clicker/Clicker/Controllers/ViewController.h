@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *clickButton;
+
+
+- (IBAction)levelsInfo:(UIButton *)sender;
+- (IBAction)clickAction:(UIButton *)sender;
 
 @end
 

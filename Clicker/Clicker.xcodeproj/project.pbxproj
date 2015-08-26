@@ -14,6 +14,7 @@
 		A215C04B1B8CD7DA0078BE6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215C04A1B8CD7DA0078BE6C /* Images.xcassets */; };
 		A215C04E1B8CD7DA0078BE6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A215C04C1B8CD7DA0078BE6C /* LaunchScreen.xib */; };
 		A215C05A1B8CD7DA0078BE6C /* ClickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C0591B8CD7DA0078BE6C /* ClickerTests.m */; };
+		A2DD52911B8DCFFD000AAABF /* levelsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DD52901B8DCFFD000AAABF /* levelsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A215C0531B8CD7DA0078BE6C /* ClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215C0581B8CD7DA0078BE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A215C0591B8CD7DA0078BE6C /* ClickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickerTests.m; sourceTree = "<group>"; };
+		A2DD528F1B8DCFFD000AAABF /* levelsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelsDetailViewController.h; sourceTree = "<group>"; };
+		A2DD52901B8DCFFD000AAABF /* levelsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = levelsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,8 @@
 			children = (
 				A215C0411B8CD7DA0078BE6C /* AppDelegate.h */,
 				A215C0421B8CD7DA0078BE6C /* AppDelegate.m */,
-				A215C0441B8CD7DA0078BE6C /* ViewController.h */,
-				A215C0451B8CD7DA0078BE6C /* ViewController.m */,
-				A215C0471B8CD7DA0078BE6C /* Main.storyboard */,
+				A22216421B8DA28000B9C5A1 /* Controllers */,
+				A22216431B8DA29500B9C5A1 /* Views */,
 				A215C04A1B8CD7DA0078BE6C /* Images.xcassets */,
 				A215C04C1B8CD7DA0078BE6C /* LaunchScreen.xib */,
 				A215C03D1B8CD7DA0078BE6C /* Supporting Files */,
@@ -117,6 +119,25 @@
 				A215C0581B8CD7DA0078BE6C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A22216421B8DA28000B9C5A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A215C0441B8CD7DA0078BE6C /* ViewController.h */,
+				A215C0451B8CD7DA0078BE6C /* ViewController.m */,
+				A2DD528F1B8DCFFD000AAABF /* levelsDetailViewController.h */,
+				A2DD52901B8DCFFD000AAABF /* levelsDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A22216431B8DA29500B9C5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A215C0471B8CD7DA0078BE6C /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DD52911B8DCFFD000AAABF /* levelsDetailViewController.m in Sources */,
 				A215C0461B8CD7DA0078BE6C /* ViewController.m in Sources */,
 				A215C0431B8CD7DA0078BE6C /* AppDelegate.m in Sources */,
 				A215C0401B8CD7DA0078BE6C /* main.m in Sources */,
@@ -346,8 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Clicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -356,8 +380,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Clicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -414,6 +440,7 @@
 				A215C05F1B8CD7DA0078BE6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A215C0601B8CD7DA0078BE6C /* Build configuration list for PBXNativeTarget "ClickerTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +449,7 @@
 				A215C0621B8CD7DA0078BE6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
