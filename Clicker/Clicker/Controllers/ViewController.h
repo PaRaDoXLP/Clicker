@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "animatedLabel.h"
 
 @interface ViewController : UIViewController
 

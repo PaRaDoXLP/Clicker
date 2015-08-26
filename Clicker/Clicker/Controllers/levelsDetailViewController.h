@@ -10,4 +10,7 @@
 
 @interface levelsDetailViewController : UIViewController
 
+@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) NSMutableArray * tableArray;
+
 @end

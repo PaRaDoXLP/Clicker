@@ -40,29 +40,10 @@
 - (IBAction)clickAction:(UIButton *)sender
 {
     int width = self.view.frame.size.width;
-    UILabel * testLabel = [[UILabel alloc] initWithFrame:CGRectMake((arc4random() % width), self.view.frame.size.height/2 - 25, 100, 50)];
+    animatedLabel * testLabel = [[animatedLabel alloc] initWithFrame:CGRectMake((arc4random() % (width-80)), self.view.frame.size.height/2 - 35, 100, 70)];
     [testLabel setText:@"+20"];
-    [self.view addSubview:testLabel];
     
-    testLabel.alpha = 0.0;
-    [UIView animateWithDuration:1.0
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         testLabel.alpha = 1.0;
-                     }
-                     completion:^(BOOL finished){
-                         [UIView animateWithDuration:1.0
-                                               delay:1.0
-                                             options: UIViewAnimationOptionCurveEaseOut
-                                          animations:^{
-                                              testLabel.alpha = 0.0;
-                                              
-                                          }
-                                          completion:^(BOOL finished){
-                                              NSLog(@"Done!");
-                                              [testLabel removeFromSuperview];
-                                          }];
-                     }];
+    [self.view addSubview:testLabel];
+    [testLabel setAnimation];
 }
 @end

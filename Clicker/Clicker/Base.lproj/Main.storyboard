@@ -4,6 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Halo.ttf">
+            <string>Halo</string>
+            <string>Halo</string>
+            <string>Halo</string>
+            <string>Halo</string>
+            <string>Halo</string>
+            <string>Halo</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="WXy-eA-Rbs">
@@ -39,6 +49,7 @@
                                     <constraint firstAttribute="height" constant="30" id="34H-Sh-P0C"/>
                                     <constraint firstAttribute="width" constant="80" id="4nN-jg-RFD"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="15"/>
                                 <state key="normal" title="CLICK!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,12 +57,13 @@
                                     <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r6b-uw-5Ni"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-MV-5tQ">
-                                <rect key="frame" x="529" y="30" width="45" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-MV-5tQ">
+                                <rect key="frame" x="539" y="20" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="HQn-jx-JNc"/>
                                     <constraint firstAttribute="height" constant="45" id="wXE-TC-GKw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="40"/>
                                 <state key="normal" title="?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -61,44 +73,44 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIa-21-ag6">
-                                <rect key="frame" x="26" y="30" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfB-b3-u7G">
-                                <rect key="frame" x="26" y="59" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="20" width="98" height="21"/>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-bT-Gn7">
-                                <rect key="frame" x="92" y="30" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="122" y="20" width="74" height="21"/>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-WV-ZIi">
-                                <rect key="frame" x="92" y="59" width="20" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="122" y="49" width="74" height="21"/>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfB-b3-u7G">
+                                <rect key="frame" x="16" y="49" width="81" height="21"/>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qIa-21-ag6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="3PZ-Cz-FFR"/>
                             <constraint firstItem="ff2-bT-Gn7" firstAttribute="leading" secondItem="qIa-21-ag6" secondAttribute="trailing" constant="16" id="53m-Wh-NCP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gUx-MV-5tQ" secondAttribute="trailing" constant="10" id="81W-Iq-m3p"/>
-                            <constraint firstItem="gUx-MV-5tQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="CtO-Af-Etj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YRz-xj-7MI" secondAttribute="bottom" constant="10" id="DZB-oI-ccD"/>
+                            <constraint firstItem="qIa-21-ag6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MVy-rY-G7l"/>
                             <constraint firstItem="qIa-21-ag6" firstAttribute="top" secondItem="ff2-bT-Gn7" secondAttribute="top" id="SbE-Pu-cGz"/>
                             <constraint firstItem="rfB-b3-u7G" firstAttribute="top" secondItem="qIa-21-ag6" secondAttribute="bottom" constant="8" id="aXC-yT-gsk"/>
                             <constraint firstItem="rfB-b3-u7G" firstAttribute="top" secondItem="iX3-WV-ZIi" secondAttribute="top" id="iru-Hu-5fa"/>
                             <constraint firstItem="qIa-21-ag6" firstAttribute="leading" secondItem="rfB-b3-u7G" secondAttribute="leading" id="jmh-hP-ZND"/>
                             <constraint firstItem="ff2-bT-Gn7" firstAttribute="leading" secondItem="iX3-WV-ZIi" secondAttribute="leading" id="oP3-qB-ZZm"/>
+                            <constraint firstItem="qIa-21-ag6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pty-9l-dpy"/>
                             <constraint firstItem="qIa-21-ag6" firstAttribute="top" secondItem="gUx-MV-5tQ" secondAttribute="top" id="q5e-4D-5pC"/>
                             <constraint firstAttribute="centerX" secondItem="YRz-xj-7MI" secondAttribute="centerX" id="ujK-LJ-TCS"/>
+                            <constraint firstItem="gUx-MV-5tQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xCO-rl-EIE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R52-NA-vUC"/>

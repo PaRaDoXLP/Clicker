@@ -14,6 +14,9 @@
 		A215C04B1B8CD7DA0078BE6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215C04A1B8CD7DA0078BE6C /* Images.xcassets */; };
 		A215C04E1B8CD7DA0078BE6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A215C04C1B8CD7DA0078BE6C /* LaunchScreen.xib */; };
 		A215C05A1B8CD7DA0078BE6C /* ClickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C0591B8CD7DA0078BE6C /* ClickerTests.m */; };
+		A254B8C21B8E318300D9235E /* animatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A254B8C11B8E318300D9235E /* animatedLabel.m */; };
+		A256F4541B8E60C60060FAC8 /* LevelsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A256F4531B8E60C60060FAC8 /* LevelsList.plist */; };
+		A27AD2851B8E39A800882B62 /* Halo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A27AD2841B8E39A800882B62 /* Halo.ttf */; };
 		A2DD52911B8DCFFD000AAABF /* levelsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DD52901B8DCFFD000AAABF /* levelsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,10 @@
 		A215C0531B8CD7DA0078BE6C /* ClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215C0581B8CD7DA0078BE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A215C0591B8CD7DA0078BE6C /* ClickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickerTests.m; sourceTree = "<group>"; };
+		A254B8C01B8E318300D9235E /* animatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = animatedLabel.h; path = "Custom UI/animatedLabel.h"; sourceTree = "<group>"; };
+		A254B8C11B8E318300D9235E /* animatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = animatedLabel.m; path = "Custom UI/animatedLabel.m"; sourceTree = "<group>"; };
+		A256F4531B8E60C60060FAC8 /* LevelsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LevelsList.plist; path = Resources/LevelsList.plist; sourceTree = "<group>"; };
+		A27AD2841B8E39A800882B62 /* Halo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Halo.ttf; path = Resources/Fonts/Halo.ttf; sourceTree = "<group>"; };
 		A2DD528F1B8DCFFD000AAABF /* levelsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelsDetailViewController.h; sourceTree = "<group>"; };
 		A2DD52901B8DCFFD000AAABF /* levelsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = levelsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,12 +91,14 @@
 		A215C03C1B8CD7D90078BE6C /* Clicker */ = {
 			isa = PBXGroup;
 			children = (
+				A254B8BF1B8E313400D9235E /* Custom UI */,
 				A215C0411B8CD7DA0078BE6C /* AppDelegate.h */,
 				A215C0421B8CD7DA0078BE6C /* AppDelegate.m */,
 				A22216421B8DA28000B9C5A1 /* Controllers */,
 				A22216431B8DA29500B9C5A1 /* Views */,
 				A215C04A1B8CD7DA0078BE6C /* Images.xcassets */,
 				A215C04C1B8CD7DA0078BE6C /* LaunchScreen.xib */,
+				A27AD2821B8E397800882B62 /* Resources */,
 				A215C03D1B8CD7DA0078BE6C /* Supporting Files */,
 			);
 			path = Clicker;
@@ -100,6 +109,7 @@
 			children = (
 				A215C03E1B8CD7DA0078BE6C /* Info.plist */,
 				A215C03F1B8CD7DA0078BE6C /* main.m */,
+				A256F4531B8E60C60060FAC8 /* LevelsList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +148,31 @@
 				A215C0471B8CD7DA0078BE6C /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		A254B8BF1B8E313400D9235E /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				A254B8C01B8E318300D9235E /* animatedLabel.h */,
+				A254B8C11B8E318300D9235E /* animatedLabel.m */,
+			);
+			name = "Custom UI";
+			sourceTree = "<group>";
+		};
+		A27AD2821B8E397800882B62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A27AD2831B8E398900882B62 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A27AD2831B8E398900882B62 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A27AD2841B8E39A800882B62 /* Halo.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27AD2851B8E39A800882B62 /* Halo.ttf in Resources */,
 				A215C0491B8CD7DA0078BE6C /* Main.storyboard in Resources */,
+				A256F4541B8E60C60060FAC8 /* LevelsList.plist in Resources */,
 				A215C04E1B8CD7DA0078BE6C /* LaunchScreen.xib in Resources */,
 				A215C04B1B8CD7DA0078BE6C /* Images.xcassets in Resources */,
 			);
@@ -240,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A254B8C21B8E318300D9235E /* animatedLabel.m in Sources */,
 				A2DD52911B8DCFFD000AAABF /* levelsDetailViewController.m in Sources */,
 				A215C0461B8CD7DA0078BE6C /* ViewController.m in Sources */,
 				A215C0431B8CD7DA0078BE6C /* AppDelegate.m in Sources */,
