@@ -8,7 +8,7 @@
 
 #import "CLGameViewController.h"
 
-@interface CLGameViewController ()
+@interface CLGameViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -25,7 +25,6 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:YES];
-//    [self.clickButton.titleLabel setFont:[UIFont fontWithName:@"Halo" size:35]];
     [self.clickButton setTitle:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick] forState:UIControlStateNormal];
 }
 
@@ -41,17 +40,49 @@
 
 - (IBAction)clickAction:(UIButton *)sender
 {
+    [[CLGameManager shared]addPointsByClick];
+    
     int width = self.view.frame.size.width;
     CLAnimatedLabel * testLabel = [[CLAnimatedLabel alloc] initWithFrame:CGRectMake((arc4random() % (width-80)), self.view.frame.size.height/2 - 35, 100, 70)];
-    [[CLGameManager shared]addPointsByClick];
     [testLabel setText:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick]];
     [self.scoreLabel setText:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPoints]];
     [self.view addSubview:testLabel];
     [testLabel setAnimation];
     
     [RACObserve([CLGameManager shared], currentLevel) subscribeNext:^(NSNumber* x){
-        [self.clickButton setTitle:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentPointsByClick] forState:UIControlStateNormal];
-        [self.levelLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentLevel]];
+        switch ([CLGameManager shared].currentLevel)
+        {
+            case 13:
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Final"
+                                                                message:@"Вы прошли игру"
+                                                               delegate:self
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"Начать заново", nil];
+                [alert show];
+            }
+                break;
+            default:
+            {
+                [self.clickButton setTitle:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick] forState:UIControlStateNormal];
+                [self.levelLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentLevel]];
+            }
+                break;
+        }
     }];
 }
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.cancelButtonIndex != buttonIndex)
+    {
+        [[CLGameManager shared] clear];
+        
+        [self.clickButton setTitle:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick] forState:UIControlStateNormal];
+        [self.levelLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentLevel]];
+        [self.scoreLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentPoints]];
+    }
+}
+
 @end

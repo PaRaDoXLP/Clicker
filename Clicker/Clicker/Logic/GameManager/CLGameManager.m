@@ -170,6 +170,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
     
     [userDefaults setInteger:lastTotalPoints forKey:LAST_TOTAL_POINTS];
     [userDefaults setInteger:lastSavedLevel forKey:LAST_SAVED_LEVEL];
+    [userDefaults setInteger:currentPointsByClick forKey:LAST_POINTS_BY_CLICK];
     [userDefaults synchronize];
 }
 
@@ -177,6 +178,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
 {
     currentLevel = 1;
     currentPoints = 0;
+    currentPointsByClick = 1;
     
     [self savePointsLevel];
 }

@@ -52,7 +52,6 @@
                                               
                                           }
                                           completion:^(BOOL finished){
-                                              NSLog(@"Done!");
                                               [self removeFromSuperview];
                                           }];
                      }];

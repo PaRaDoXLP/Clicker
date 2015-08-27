@@ -44,9 +44,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRz-xj-7MI">
-                                <rect key="frame" x="260" y="520" width="80" height="70"/>
+                                <rect key="frame" x="225" y="520" width="150" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="PgC-tm-s4R"/>
+                                    <constraint firstAttribute="width" constant="150" id="dto-m1-ir9"/>
                                     <constraint firstAttribute="height" constant="70" id="s4F-Lc-Nk1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="35"/>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="134"/>
+            <point key="canvasLocation" x="131" y="134"/>
         </scene>
         <!--Levels Info View Controller-->
         <scene sceneID="iE4-A5-ysb">

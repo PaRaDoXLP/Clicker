@@ -30,16 +30,8 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor clearColor];
 
-    self.tableArray = [[NSMutableArray alloc]initWithContentsOfURL:[NSURL URLWithString:@"https://doc-08-b0-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/lp606dgsmm55t8q68615660bad6erhoo/1440662400000/06068092106879213384/*/0B8peIvKcSSBAUHRRTlVzcnhHYWs?e=download"]];
-    
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"LevelsList" ofType:@"plist"];
-//    NSArray *contentArray = [NSArray arrayWithContentsOfFile:path];
-//    self.tableArray = [[NSMutableArray alloc]initWithArray:contentArray copyItems:YES];
-    
+    self.tableArray = [[NSMutableArray alloc]initWithContentsOfURL:[NSURL URLWithString:@"http://cs7065.vk.me/c612124/u5752255/docs/dac7f8cc317a/LevelsList.plist"]];
     [self.tableView reloadData];
-    
-    
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -57,8 +49,8 @@
     return sectionName;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSString * str;
     static NSString *cellIdentifier = @"Cell";
     
@@ -66,6 +58,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
+    [cell setUserInteractionEnabled:NO];//отключение отклика ячейки таблицы на касания
+    
     NSDictionary *dictionaryOfArray = [self.tableArray objectAtIndex:indexPath.section];
     NSArray *keysArray = dictionaryOfArray.allKeys;
     switch (indexPath.row)
@@ -76,7 +70,7 @@
         case 1:
             str = @"Кол-во очков за один клик";
     }
-    
+    //Настройка текстовой строки на перенос по словам
     NSMutableAttributedString *titleAttributedString;
     NSMutableParagraphStyle *titleParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     [titleParagraphStyle setLineSpacing:-5];
