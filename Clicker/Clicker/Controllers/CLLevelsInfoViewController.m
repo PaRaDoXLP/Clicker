@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 PaRaDoX. All rights reserved.
 //
 
-#import "levelsDetailViewController.h"
+#import "CLLevelsInfoViewController.h"
 
-@interface levelsDetailViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface CLLevelsInfoViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation levelsDetailViewController
+@implementation CLLevelsInfoViewController
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -29,11 +29,13 @@
     self.tableView.delegate = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor clearColor];
+
+    self.tableArray = [[NSMutableArray alloc]initWithContentsOfURL:[NSURL URLWithString:@"https://doc-08-b0-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/lp606dgsmm55t8q68615660bad6erhoo/1440662400000/06068092106879213384/*/0B8peIvKcSSBAUHRRTlVzcnhHYWs?e=download"]];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"LevelsList" ofType:@"plist"];
-    NSArray *contentArray = [NSArray arrayWithContentsOfFile:path];
-    // Having outlet for tableArray variable.
-    self.tableArray = [[NSMutableArray alloc]initWithArray:contentArray copyItems:YES];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"LevelsList" ofType:@"plist"];
+//    NSArray *contentArray = [NSArray arrayWithContentsOfFile:path];
+//    self.tableArray = [[NSMutableArray alloc]initWithArray:contentArray copyItems:YES];
+    
     [self.tableView reloadData];
     
     
@@ -45,7 +47,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // In your case dictionary contains strings with keys and values. The below line returns dictionary only. not array..
     NSDictionary *dictionary = [self.tableArray objectAtIndex:section];
     return dictionary.allKeys.count;
 }

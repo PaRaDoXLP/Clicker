@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface levelsDetailViewController : UIViewController
+@interface CLLevelsInfoViewController : UIViewController
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray * tableArray;

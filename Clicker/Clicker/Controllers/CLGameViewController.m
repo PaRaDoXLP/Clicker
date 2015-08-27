@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 PaRaDoX. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CLGameViewController.h"
 
-@interface ViewController ()
+@interface CLGameViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CLGameViewController
 
 - (void)viewDidLoad
 {
@@ -40,7 +40,7 @@
 - (IBAction)clickAction:(UIButton *)sender
 {
     int width = self.view.frame.size.width;
-    animatedLabel * testLabel = [[animatedLabel alloc] initWithFrame:CGRectMake((arc4random() % (width-80)), self.view.frame.size.height/2 - 35, 100, 70)];
+    CLAnimatedLabel * testLabel = [[CLAnimatedLabel alloc] initWithFrame:CGRectMake((arc4random() % (width-80)), self.view.frame.size.height/2 - 35, 100, 70)];
     [testLabel setText:@"+20"];
     
     [self.view addSubview:testLabel];

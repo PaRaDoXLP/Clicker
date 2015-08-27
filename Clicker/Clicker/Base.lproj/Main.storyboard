@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="-556" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CLGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -69,7 +69,7 @@
                                 </state>
                                 <connections>
                                     <action selector="levelsInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5P-jk-oFQ"/>
-                                    <segue destination="1Q8-wt-5R8" kind="push" id="Wqf-72-zRG"/>
+                                    <segue destination="1Q8-wt-5R8" kind="show" id="9So-Qc-jIQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIa-21-ag6">
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="112" y="134"/>
         </scene>
-        <!--Levels Detail View Controller-->
+        <!--Levels Info View Controller-->
         <scene sceneID="iE4-A5-ysb">
             <objects>
-                <viewController id="1Q8-wt-5R8" customClass="levelsDetailViewController" sceneMemberID="viewController">
+                <viewController id="1Q8-wt-5R8" customClass="CLLevelsInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j8q-Xi-0zA"/>
                         <viewControllerLayoutGuide type="bottom" id="UOl-Oz-n7a"/>

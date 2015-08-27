@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "animatedLabel.h"
+#import "CLAnimatedLabel.h"
 
-@interface ViewController : UIViewController
+@interface CLGameViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *clickButton;
 

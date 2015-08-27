@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 PaRaDoX. All rights reserved.
 //
 
-#import "animatedLabel.h"
+#import "CLAnimatedLabel.h"
 
-@implementation animatedLabel
+@implementation CLAnimatedLabel
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 PaRaDoX. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CLAppDelegate.h"
 
-@interface AppDelegate ()
+@interface CLAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CLAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
