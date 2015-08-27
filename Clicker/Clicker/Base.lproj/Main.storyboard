@@ -44,15 +44,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRz-xj-7MI">
-                                <rect key="frame" x="260" y="560" width="80" height="30"/>
+                                <rect key="frame" x="260" y="520" width="80" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="34H-Sh-P0C"/>
-                                    <constraint firstAttribute="width" constant="80" id="4nN-jg-RFD"/>
+                                    <constraint firstAttribute="width" constant="80" id="PgC-tm-s4R"/>
+                                    <constraint firstAttribute="height" constant="70" id="s4F-Lc-Nk1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="15"/>
-                                <state key="normal" title="CLICK!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="Halo" family="Halo" pointSize="35"/>
                                 <connections>
                                     <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r6b-uw-5Ni"/>
                                 </connections>
@@ -117,6 +114,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="clickButton" destination="YRz-xj-7MI" id="Bq0-Cz-R2E"/>
+                        <outlet property="levelLabel" destination="iX3-WV-ZIi" id="axg-P1-7Gz"/>
+                        <outlet property="scoreLabel" destination="ff2-bT-Gn7" id="8DD-pa-7vV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

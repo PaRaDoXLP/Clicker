@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AFF9B975817E102AB53F87E /* libPods-Clicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE58A73FB32607A06615529 /* libPods-Clicker.a */; };
 		A215C0401B8CD7DA0078BE6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C03F1B8CD7DA0078BE6C /* main.m */; };
 		A215C0431B8CD7DA0078BE6C /* CLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C0421B8CD7DA0078BE6C /* CLAppDelegate.m */; };
 		A215C0461B8CD7DA0078BE6C /* CLGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C0451B8CD7DA0078BE6C /* CLGameViewController.m */; };
@@ -15,6 +16,7 @@
 		A215C04E1B8CD7DA0078BE6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A215C04C1B8CD7DA0078BE6C /* LaunchScreen.xib */; };
 		A215C05A1B8CD7DA0078BE6C /* ClickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A215C0591B8CD7DA0078BE6C /* ClickerTests.m */; };
 		A23C73B11B8F09F100D49F9F /* CLGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A23C73B01B8F09F100D49F9F /* CLGameManager.m */; };
+		A23C73BD1B8F21AC00D49F9F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A23C73BC1B8F21AC00D49F9F /* Podfile */; };
 		A254B8C21B8E318300D9235E /* CLAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A254B8C11B8E318300D9235E /* CLAnimatedLabel.m */; };
 		A256F4541B8E60C60060FAC8 /* LevelsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A256F4531B8E60C60060FAC8 /* LevelsList.plist */; };
 		A27AD2851B8E39A800882B62 /* Halo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A27AD2841B8E39A800882B62 /* Halo.ttf */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4A0B3CA4CC1EB8E9B1325E /* Pods-Clicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clicker/Pods-Clicker.debug.xcconfig"; sourceTree = "<group>"; };
+		1CE58A73FB32607A06615529 /* libPods-Clicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		989ACD256FB3F98871498D6A /* Pods-Clicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clicker/Pods-Clicker.release.xcconfig"; sourceTree = "<group>"; };
 		A215C03A1B8CD7D90078BE6C /* Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215C03E1B8CD7DA0078BE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A215C03F1B8CD7DA0078BE6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,8 +50,10 @@
 		A215C0531B8CD7DA0078BE6C /* ClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215C0581B8CD7DA0078BE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A215C0591B8CD7DA0078BE6C /* ClickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickerTests.m; sourceTree = "<group>"; };
-		A23C73AF1B8F09F100D49F9F /* CLGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLGameManager.h; path = Logic/CLGameManager.h; sourceTree = "<group>"; };
-		A23C73B01B8F09F100D49F9F /* CLGameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLGameManager.m; path = Logic/CLGameManager.m; sourceTree = "<group>"; };
+		A23C73AF1B8F09F100D49F9F /* CLGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLGameManager.h; path = Logic/GameManager/CLGameManager.h; sourceTree = "<group>"; };
+		A23C73B01B8F09F100D49F9F /* CLGameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLGameManager.m; path = Logic/GameManager/CLGameManager.m; sourceTree = "<group>"; };
+		A23C73B31B8F1E3800D49F9F /* CLGameConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLGameConstants.h; path = Logic/CLGameConstants.h; sourceTree = "<group>"; };
+		A23C73BC1B8F21AC00D49F9F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A254B8C01B8E318300D9235E /* CLAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAnimatedLabel.h; path = "Custom UI/CLAnimatedLabel.h"; sourceTree = "<group>"; };
 		A254B8C11B8E318300D9235E /* CLAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAnimatedLabel.m; path = "Custom UI/CLAnimatedLabel.m"; sourceTree = "<group>"; };
 		A256F4531B8E60C60060FAC8 /* LevelsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LevelsList.plist; path = Resources/LevelsList.plist; sourceTree = "<group>"; };
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFF9B975817E102AB53F87E /* libPods-Clicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84CC7205936DF77224748FE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE58A73FB32607A06615529 /* libPods-Clicker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A215C0311B8CD7D90078BE6C = {
 			isa = PBXGroup;
 			children = (
 				A215C03C1B8CD7D90078BE6C /* Clicker */,
 				A215C0561B8CD7DA0078BE6C /* ClickerTests */,
 				A215C03B1B8CD7D90078BE6C /* Products */,
+				A23C73BC1B8F21AC00D49F9F /* Podfile */,
+				FCBA30D36A2AA7B6911B7884 /* Pods */,
+				84CC7205936DF77224748FE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,10 +176,19 @@
 		A23C73AE1B8F099300D49F9F /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				A23C73B21B8F1DCB00D49F9F /* GameManager */,
+				A23C73B31B8F1E3800D49F9F /* CLGameConstants.h */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		A23C73B21B8F1DCB00D49F9F /* GameManager */ = {
+			isa = PBXGroup;
+			children = (
 				A23C73AF1B8F09F100D49F9F /* CLGameManager.h */,
 				A23C73B01B8F09F100D49F9F /* CLGameManager.m */,
 			);
-			name = Logic;
+			name = GameManager;
 			sourceTree = "<group>";
 		};
 		A254B8BF1B8E313400D9235E /* Custom UI */ = {
@@ -188,6 +216,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		FCBA30D36A2AA7B6911B7884 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F4A0B3CA4CC1EB8E9B1325E /* Pods-Clicker.debug.xcconfig */,
+				989ACD256FB3F98871498D6A /* Pods-Clicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A215C05D1B8CD7DA0078BE6C /* Build configuration list for PBXNativeTarget "Clicker" */;
 			buildPhases = (
+				011B9C4889C5E31C9E6348BB /* Check Pods Manifest.lock */,
 				A215C0361B8CD7D90078BE6C /* Sources */,
 				A215C0371B8CD7D90078BE6C /* Frameworks */,
 				A215C0381B8CD7D90078BE6C /* Resources */,
+				091077630295BB0180731D5C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23C73BD1B8F21AC00D49F9F /* Podfile in Resources */,
 				A27AD2851B8E39A800882B62 /* Halo.ttf in Resources */,
 				A215C0491B8CD7DA0078BE6C /* Main.storyboard in Resources */,
 				A256F4541B8E60C60060FAC8 /* LevelsList.plist in Resources */,
@@ -284,6 +324,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		011B9C4889C5E31C9E6348BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		091077630295BB0180731D5C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clicker/Pods-Clicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A215C0361B8CD7D90078BE6C /* Sources */ = {
@@ -417,6 +490,7 @@
 		};
 		A215C05E1B8CD7DA0078BE6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F4A0B3CA4CC1EB8E9B1325E /* Pods-Clicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Clicker/Info.plist;
@@ -429,6 +503,7 @@
 		};
 		A215C05F1B8CD7DA0078BE6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 989ACD256FB3F98871498D6A /* Pods-Clicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Clicker/Info.plist;
