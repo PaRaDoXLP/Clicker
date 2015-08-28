@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//  Установка значений из хранилища в label's
     [self.scoreLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentPoints]];
     [self.levelLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentLevel]];
 }
@@ -49,6 +50,7 @@
     [self.view addSubview:testLabel];
     [testLabel setAnimation];
     
+//  Запуск "наблюдателя" за изменениями уровня в игре
     [RACObserve([CLGameManager shared], currentLevel) subscribeNext:^(NSNumber* x){
         switch ([CLGameManager shared].currentLevel)
         {
@@ -77,6 +79,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.cancelButtonIndex != buttonIndex)
     {
+//      Сброс значений
         [[CLGameManager shared] clear];
         
         [self.clickButton setTitle:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick] forState:UIControlStateNormal];

@@ -52,7 +52,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
     }
     return self;
 }
-
+// Процедура начисления поинтов
 - (void) addPointsByClick
 {
     switch (currentLevel)
@@ -162,7 +162,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
             break;
     }
 }
-
+// Процедрура созранения данных по игре в NSUserDefaults
 - (void)savePointsLevel
 {
     lastTotalPoints = currentPoints;
@@ -173,7 +173,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
     [userDefaults setInteger:currentPointsByClick forKey:LAST_POINTS_BY_CLICK];
     [userDefaults synchronize];
 }
-
+// Сброс данных  в начальное значение
 - (void) clear
 {
     currentLevel = 1;
