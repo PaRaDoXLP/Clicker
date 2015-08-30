@@ -30,7 +30,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor clearColor];
 
-    self.tableArray = [[NSMutableArray alloc]initWithContentsOfURL:[NSURL URLWithString:@"http://cs7065.vk.me/c612124/u5752255/docs/dac7f8cc317a/LevelsList.plist"]];
+    self.tableArray = [[NSMutableArray alloc]initWithContentsOfURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/PaRaDoXLP/Clicker/master/Clicker/Clicker/Resources/LevelsList.plist"]];
     [self.tableView reloadData];
 }
 
@@ -65,7 +65,7 @@
     switch (indexPath.row)
     {
         case 0:
-            str = @"Кол-во очков для перехода на следующий уровень";
+            str = @"Кол-во очков для перехода на уровень";
             break;
         case 1:
             str = @"Кол-во очков за один клик";
@@ -79,7 +79,7 @@
     cell.textLabel.attributedText = titleAttributedString;
     [cell.textLabel setNumberOfLines:2];
     
-    cell.textLabel.font = [UIFont systemFontOfSize:15];
+    cell.textLabel.font = [UIFont systemFontOfSize:17];
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     
     cell.detailTextLabel.text = [dictionaryOfArray valueForKey:[keysArray objectAtIndex:indexPath.row]];

@@ -18,6 +18,7 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
 @synthesize userDefaults;
 @synthesize lastTotalPoints, lastSavedLevel;
 @synthesize currentPoints, currentLevel, currentPointsByClick;
+@synthesize levelsArray;
 
 + (id)shared
 {
@@ -49,117 +50,70 @@ static NSString* const LAST_POINTS_BY_CLICK  = @"lastPointsByClick";
             lastSavedLevel = currentLevel = 1;
             currentPointsByClick = LEVEL_1_CLICK_POINTS;
         }
+       self.levelsArray = @[
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_2_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_1_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_2_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_3_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_2_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_3_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_4_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_3_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_4_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_5_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_4_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_5_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_6_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_5_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_6_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_7_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_6_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_7_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_8_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_7_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_8_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_9_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_8_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_9_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_10_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_9_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_10_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_11_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_10_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_11_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_12_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_11_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_12_CLICK_POINTS]},
+  
+                            @{@"pointsToNextLevel": [NSNumber numberWithInteger:LEVEL_13_POINTS],
+                              @"currentLevelPoints": [NSNumber numberWithInteger:LEVEL_12_CLICK_POINTS],
+                              @"nextLevelPoints": [NSNumber numberWithInteger:LEVEL_13_CLICK_POINTS]},
+                            ];
     }
     return self;
 }
 // Процедура начисления поинтов
 - (void) addPointsByClick
 {
-    switch (currentLevel)
+    NSDictionary *dictionary = [self.levelsArray objectAtIndex:(currentLevel-1)];
+    NSNumber* pointsToNextLevel = [dictionary valueForKey:@"pointsToNextLevel"];
+    NSNumber* points = [dictionary valueForKey:@"currentLevelPoints"];
+    NSNumber* nextPoints = [dictionary valueForKey:@"nextLevelPoints"];
+    currentPoints +=points.intValue;
+    if (currentPoints>=pointsToNextLevel.intValue)
     {
-        case 1:
-            currentPoints += LEVEL_1_CLICK_POINTS;
-            if (currentPoints>=LEVEL_2_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_2_CLICK_POINTS;
-            }
-            break;
-        case 2:
-            currentPoints += LEVEL_2_CLICK_POINTS;
-            if (currentPoints>=LEVEL_3_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_3_CLICK_POINTS;
-            }
-            break;
-        case 3:
-            currentPoints += LEVEL_3_CLICK_POINTS;
-            if (currentPoints>=LEVEL_4_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_4_CLICK_POINTS;
-            }
-            break;
-        case 4:
-            currentPoints += LEVEL_4_CLICK_POINTS;
-            if (currentPoints>=LEVEL_5_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_5_CLICK_POINTS;
-            }
-            break;
-        case 5:
-            currentPoints += LEVEL_5_CLICK_POINTS;
-            if (currentPoints>=LEVEL_6_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_6_CLICK_POINTS;
-            }
-            break;
-        case 6:
-            currentPoints += LEVEL_6_CLICK_POINTS;
-            if (currentPoints>=LEVEL_7_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_7_CLICK_POINTS;
-            }
-            break;
-        case 7:
-            currentPoints += LEVEL_7_CLICK_POINTS;
-            if (currentPoints>=LEVEL_8_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_8_CLICK_POINTS;
-            }
-            break;
-        case 8:
-            currentPoints += LEVEL_8_CLICK_POINTS;
-            if (currentPoints>=LEVEL_9_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_9_CLICK_POINTS;
-            }
-            break;
-        case 9:
-            currentPoints += LEVEL_9_CLICK_POINTS;
-            if (currentPoints>=LEVEL_10_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_10_CLICK_POINTS;
-            }
-            break;
-        case 10:
-            currentPoints += LEVEL_10_CLICK_POINTS;
-            if (currentPoints>=LEVEL_11_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_11_CLICK_POINTS;
-            }
-            break;
-        case 11:
-            currentPoints += LEVEL_11_CLICK_POINTS;
-            if (currentPoints>=LEVEL_12_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_12_CLICK_POINTS;
-            }
-            break;
-        case 12:
-            currentPoints += LEVEL_12_CLICK_POINTS;
-            if (currentPoints>=LEVEL_13_POINTS)
-            {
-                currentLevel+=1;
-                currentPointsByClick = LEVEL_13_CLICK_POINTS;
-            }
-            break;
-        case 13:
-            currentPoints += LEVEL_13_CLICK_POINTS;
-            if (currentPoints>=LEVEL_2_POINTS)
-            {
-                currentLevel+=1;
-            }
-            break;
+        currentLevel+=1;
+        currentPointsByClick = nextPoints.intValue;
     }
 }
 // Процедрура созранения данных по игре в NSUserDefaults

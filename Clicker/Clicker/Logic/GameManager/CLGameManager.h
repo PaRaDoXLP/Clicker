@@ -19,7 +19,7 @@
 @property (nonatomic) NSInteger currentLevel;
 
 @property (nonatomic) NSInteger currentPointsByClick;
-
+@property (nonatomic) NSArray *levelsArray;
 + (instancetype)shared;
 
 - (id) init;

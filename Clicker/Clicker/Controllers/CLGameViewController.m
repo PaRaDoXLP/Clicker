@@ -46,7 +46,7 @@
     int width = self.view.frame.size.width;
     CLAnimatedLabel * testLabel = [[CLAnimatedLabel alloc] initWithFrame:CGRectMake((arc4random() % (width-80)), self.view.frame.size.height/2 - 35, 100, 70)];
     [testLabel setText:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPointsByClick]];
-    [self.scoreLabel setText:[NSString stringWithFormat:@"+%li", (long)[CLGameManager shared].currentPoints]];
+    [self.scoreLabel setText:[NSString stringWithFormat:@"%li", (long)[CLGameManager shared].currentPoints]];
     [self.view addSubview:testLabel];
     [testLabel setAnimation];
     
